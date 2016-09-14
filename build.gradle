@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'Main'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.11'
+}
+
+test.testLogging {
+  events 'passed', 'skipped', 'failed'
+}
+
+jar {
+  manifest {
+    attributes (
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'Main'
+    )
+  }
+
+  from {
+    configurations.compile.collect { it.isDirectory() ? it: zipTree(it) }
+  }
+}
