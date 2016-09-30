@@ -1,13 +1,16 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'Main'
+mainClassName = 'carpentern.noteTaker.Main'
+version = "0.1.0"
 
 repositories {
-  mavenCentral()
+   mavenCentral()
+   maven { url 'https://clojars.org/repo' }
 }
 
 dependencies {
+  compile 'org.clojars.ncarpenter:java-http-server:1.0-SNAPSHOT'
   testCompile 'junit:junit:4.11'
 }
 
@@ -19,8 +22,7 @@ jar {
   manifest {
     attributes (
       'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-      'Main-Class': 'Main'
-    )
+      'Main-Class': 'carpentern.noteTaker.Main')
   }
 
   from {
