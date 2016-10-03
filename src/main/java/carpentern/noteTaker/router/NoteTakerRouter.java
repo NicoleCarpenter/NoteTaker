@@ -3,13 +3,10 @@ package carpentern.noteTaker.router;
 import carpentern.noteTaker.handler.*;
 import carpentern.noteTaker.file.FileIO;
 import carpentern.noteTaker.file.FileSystem;
-import carpentern.noteTaker.router.RouteDictionary;
-
 import carpentern.coreServer.handler.Handler;
 import carpentern.coreServer.request.HttpRequest;
 import carpentern.coreServer.response.ResponseBuilder;
 import carpentern.coreServer.router.Router;
-import java.util.HashMap;
 
 public class NoteTakerRouter implements Router {
   private FileSystem fileSystem;
@@ -33,7 +30,7 @@ public class NoteTakerRouter implements Router {
     if (isFileFound(handler)) {
       return handler;
     } else if (isWritingNewFile(handler, method)) {
-      return new NoteRecorderHandler(fileIO, fileSystem, responseBuilder);
+      return new NoteRecorderHandler(fileIO, responseBuilder);
     } else if (isGetRequest(method)) {
       return new NotFoundHandler(fileIO, fileSystem, responseBuilder);
     } else {

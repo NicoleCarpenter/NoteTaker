@@ -18,7 +18,7 @@ public class MockHttpResponseBuilder implements ResponseBuilder {
   boolean buildPatchedContentResponseCalled;
   boolean buildRedirectResponseCalled;
   boolean buildCoffeeResponseCalled;
-  
+
   public MockHttpResponseBuilder() {
     setStatusCodeCalled = false;
     setStatusMessageCalled = false;

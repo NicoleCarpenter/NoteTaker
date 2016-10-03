@@ -32,9 +32,11 @@ public class NotFoundHandler implements Handler {
     String[] files = fileSystem.list(rootPath);
     StringBuilder builder = new StringBuilder();
     for (String file : files) {
-      builder.append("/");
-      builder.append(file);
-      builder.append("\n");
+      if (!file.equals(".DS_Store")) {
+        builder.append("/");
+        builder.append(file);
+        builder.append("\n");
+      }
     }
     return builder.toString();
   }

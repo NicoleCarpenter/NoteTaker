@@ -1,5 +1,4 @@
 import carpentern.noteTaker.file.HttpFileIO;
-import carpentern.noteTaker.file.FileSystem;
 import java.io.File;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -7,13 +6,11 @@ import org.junit.Ignore;
 @Ignore
 public class HttpFileIOTest extends junit.framework.TestCase {
   private String testRoot;
-  private String applicationRoot;
   private HttpFileIO fileIO;
 
   protected void setUp() {
     testRoot = "/Users/foo/Desktop/coding/java/applications/NoteTaker/src/test/java/carpentern/noteTaker/testFiles";
-    MockHttpFileSystem fileSystem = new MockHttpFileSystem();
-    fileIO = new HttpFileIO(new File(testRoot), fileSystem);
+    fileIO = new HttpFileIO(new File(testRoot));
   }
 
   public void testGetFileContents() {

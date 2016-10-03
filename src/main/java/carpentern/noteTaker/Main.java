@@ -5,7 +5,6 @@ import carpentern.noteTaker.file.HttpFileIO;
 import carpentern.noteTaker.router.NoteTakerRouter;
 import carpentern.noteTaker.router.RouteDictionary;
 import carpentern.noteTaker.parser.ArgumentParser;
-
 import carpentern.coreServer.io.HttpServerOutput;
 import carpentern.coreServer.parser.HttpParamParser;
 import carpentern.coreServer.request.HttpRequestParser;
@@ -13,7 +12,6 @@ import carpentern.coreServer.response.HttpResponseBuilder;
 import carpentern.coreServer.router.Router;
 import carpentern.coreServer.server.HttpServer;
 import carpentern.coreServer.socket.HttpServerSocket;
-
 import java.net.ServerSocket;
 import java.io.IOException;
 import java.io.File;
@@ -39,7 +37,7 @@ public class Main {
 
     File rootDirectory = new File(argsParser.getRootDirectory());
     HttpFileSystem fileSystem = new HttpFileSystem();
-    HttpFileIO fileIO = new HttpFileIO(rootDirectory, fileSystem);
+    HttpFileIO fileIO = new HttpFileIO(rootDirectory);
     HttpResponseBuilder httpResponseBuilder = new HttpResponseBuilder();
     RouteDictionary routeDict = new RouteDictionary(fileIO, fileSystem, httpResponseBuilder);
 
