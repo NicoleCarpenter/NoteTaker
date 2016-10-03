@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/NicoleCarpenter/NoteTaker.svg?branch=basic-functionality)](https://travis-ci.org/NicoleCarpenter/NoteTaker)
+
 # Note Taker
 
 Note Taker is an application that is made to run using a [Java Http Server](https://github.com/NicoleCarpenter/JavaHttpServer) as a dependency. The application is designed to utilize [Telnet](http://www.telnet.org/), which is an application that is used to connect to remote servers.
