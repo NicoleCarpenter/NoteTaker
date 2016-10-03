@@ -1,9 +1,9 @@
 package carpentern.noteTaker.handler;
 
+import carpentern.noteTaker.response.ResponseBuilder;
 import carpentern.coreServer.handler.Handler;
 import carpentern.coreServer.request.HttpRequest;
 import carpentern.coreServer.response.HttpResponse;
-import carpentern.coreServer.response.ResponseBuilder;
 
 public class MethodNotAllowedHandler implements Handler {
   private ResponseBuilder responseBuilder;

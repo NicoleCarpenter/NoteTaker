@@ -10,13 +10,13 @@ import org.junit.Ignore;
 @Ignore
 public class NoteReaderHandlerTest extends junit.framework.TestCase {
   private NoteReaderHandler handler;
-  private MockHttpResponseBuilder responseBuilder;
+  private MockNoteTakerResponseBuilder responseBuilder;
   private HttpFileIO fileIO;
 
   protected void setUp() {
     String rootPath = "/Users/foo/Desktop/coding/java/applications/NoteTaker/src/test/java/carpentern/noteTaker/testFiles";
     File testRoot = new File(rootPath);
-    responseBuilder = new MockHttpResponseBuilder();
+    responseBuilder = new MockNoteTakerResponseBuilder();
     fileIO = new HttpFileIO(testRoot);
     handler = new NoteReaderHandler(fileIO, responseBuilder);
   }

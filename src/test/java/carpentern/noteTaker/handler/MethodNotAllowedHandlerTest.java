@@ -4,10 +4,10 @@ import carpentern.coreServer.response.HttpResponse;
 import java.util.HashMap;
 
 public class MethodNotAllowedHandlerTest extends junit.framework.TestCase {
-  private MockHttpResponseBuilder responseBuilder;
+  private MockNoteTakerResponseBuilder responseBuilder;
 
   protected void setUp() {
-    responseBuilder = new MockHttpResponseBuilder();
+    responseBuilder = new MockNoteTakerResponseBuilder();
     MethodNotAllowedHandler handler = new MethodNotAllowedHandler(responseBuilder);
     HttpRequest request = new HttpRequest("mockMethod", "mockUri", new HashMap<>(), "HTTP/1.1", new HashMap<>(), "mockBody");
     handler.handleRoute(request);

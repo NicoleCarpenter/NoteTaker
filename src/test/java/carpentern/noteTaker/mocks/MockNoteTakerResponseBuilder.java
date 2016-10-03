@@ -1,7 +1,7 @@
+import carpentern.noteTaker.response.ResponseBuilder;
 import carpentern.coreServer.response.HttpResponse;
-import carpentern.coreServer.response.ResponseBuilder;
 
-public class MockHttpResponseBuilder implements ResponseBuilder {
+public class MockNoteTakerResponseBuilder implements ResponseBuilder {
   boolean setStatusCodeCalled;
   boolean setStatusMessageCalled;
   boolean setDefaultHeadersCalled;
@@ -19,7 +19,7 @@ public class MockHttpResponseBuilder implements ResponseBuilder {
   boolean buildRedirectResponseCalled;
   boolean buildCoffeeResponseCalled;
 
-  public MockHttpResponseBuilder() {
+  public MockNoteTakerResponseBuilder() {
     setStatusCodeCalled = false;
     setStatusMessageCalled = false;
     setDefaultHeadersCalled = false;
@@ -67,33 +67,12 @@ public class MockHttpResponseBuilder implements ResponseBuilder {
   public void buildOkResponse() {
     buildOkResponseCalled = true;
   }
-
-  public void buildPartialFileResponse(String range) {
-    buildPartialFileResponseCalled = true;
-  }
-
-  public void buildUnauthorizedResponse() {
-    buildUnauthorizedResponseCalled = true;
-  }
-
   public void buildMethodNotAllowedResponse() {
     buildMethodNotAllowedResponseCalled = true;
   }
 
   public void buildNotFoundResponse() {
     buildNotFoundResponseCalled = true;
-  }
-
-  public void buildPatchedContentResponse() {
-    buildPatchedContentResponseCalled = true;
-  }
-
-  public void buildRedirectResponse() {
-    buildRedirectResponseCalled = true;
-  }
-
-  public void buildCoffeeResponse() {
-    buildCoffeeResponseCalled = true;
   }
 
 }

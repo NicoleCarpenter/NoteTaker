@@ -16,7 +16,7 @@ public class RouteDictionaryTest extends junit.framework.TestCase {
     File testRoot = new File(rootPath);
     HttpFileSystem fileSystem = new HttpFileSystem();
     HttpFileIO fileIO = new HttpFileIO(testRoot);
-    MockHttpResponseBuilder responseBuilder = new MockHttpResponseBuilder();
+    MockNoteTakerResponseBuilder responseBuilder = new MockNoteTakerResponseBuilder();
     routeDict = new RouteDictionary(fileIO, fileSystem, responseBuilder);
   }
 
