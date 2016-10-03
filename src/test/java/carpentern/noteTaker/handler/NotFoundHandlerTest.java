@@ -9,10 +9,10 @@ import org.junit.Ignore;
 
 @Ignore
 public class NotFoundHandlerTest extends junit.framework.TestCase {
-  private MockHttpResponseBuilder responseBuilder;
+  private MockNoteTakerResponseBuilder responseBuilder;
 
   protected void setUp() {
-    responseBuilder = new MockHttpResponseBuilder();
+    responseBuilder = new MockNoteTakerResponseBuilder();
     String rootPath = "/Users/foo/Desktop/coding/java/applications/NoteTaker/src/test/java/carpentern/noteTaker/testFiles";
     File testRoot = new File(rootPath);
     HttpFileSystem fileSystem = new HttpFileSystem();

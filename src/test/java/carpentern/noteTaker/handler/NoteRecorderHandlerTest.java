@@ -6,10 +6,10 @@ import java.util.HashMap;
 public class NoteRecorderHandlerTest extends junit.framework.TestCase {
   private NoteRecorderHandler handler;
   private MockHttpFileIO fileIO;
-  private MockHttpResponseBuilder responseBuilder;
+  private MockNoteTakerResponseBuilder responseBuilder;
 
   protected void setUp() {
-    responseBuilder = new MockHttpResponseBuilder();
+    responseBuilder = new MockNoteTakerResponseBuilder();
     fileIO = new MockHttpFileIO();
     handler = new NoteRecorderHandler(fileIO, responseBuilder);
   }
