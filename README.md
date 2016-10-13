@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/NicoleCarpenter/NoteTaker.svg?branch=basic-functionality)](https://travis-ci.org/NicoleCarpenter/NoteTaker)
+[![Build Status](https://travis-ci.org/NicoleCarpenter/NoteTaker.svg?branch=master)](https://travis-ci.org/NicoleCarpenter/NoteTaker)
 
 # Note Taker
 
